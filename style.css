@@ -1,0 +1,421 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: 0;
+  border: 0;
+}
+
+:root {
+  --primary: #3932b5;
+  --primary-rgb: 50, 50, 181;
+  --grey: #f0efef;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Space Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 16px;
+  line-height: 1.25;
+}
+
+button {
+  height: 48px;
+  padding: 0.5rem 2.5rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  line-height: 1;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all ease-in 0.2s;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+button:focus {
+  outline: 3px solid rgba(var(--primary-rgb), 0.3);
+  outline-offset: 2px;
+}
+
+button.white {
+  background-color: white;
+  color: black;
+}
+
+button.primary {
+  background-color: var(--primary);
+  color: white;
+}
+
+/* Hero */
+#hero {
+  background-color: var(--grey);
+  padding: 2.5rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#hero > div {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 4rem;
+}
+
+#hero h3 {
+  font-weight: 700;
+  font-size: 3rem;
+}
+
+#hero h3 span {
+  color: var(--primary);
+}
+
+#hero p {
+  font-weight: 400;
+  font-size: 1rem;
+  margin: 1.5rem 0;
+}
+
+#hero > div > img {
+  min-height: 480px;
+  max-height: 600px;
+}
+
+#hero .hero-download-imgs {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.hero-download-imgs img {
+  height: 48px;
+  border-radius: 0.5rem;
+  background-color: black;
+  width: auto;
+  min-width: 120px;
+  cursor: pointer;
+}
+
+/* about */
+#about {
+  padding: 2.5rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#about > div {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 4rem;
+}
+
+#about h3 {
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+#about h3 span {
+  color: var(--primary);
+}
+
+#about p {
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+#about > div > img {
+  min-height: 480px;
+  max-height: 600px;
+}
+
+#about ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+#about li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-align: left;
+}
+
+#about li .icon {
+  height: 64px;
+  width: 64px;
+  background: white;
+  border-left: 4px solid var(--primary);
+  border-radius: 1rem;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  padding: 12px;
+}
+
+#about .icon img {
+  width: 40px;
+  height: 40px;
+}
+
+#about li h4 {
+  font-weight: 600;
+  margin-bottom: 4px;
+  font-size: 1rem;
+}
+
+#about li p {
+  font-size: 14px;
+}
+
+/* FEATURES Section */
+#features {
+  padding: 2.5rem 1rem;
+}
+
+#features h3 {
+  font-weight: 700;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+#features .container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+#features .left-col,
+#features .right-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+#features img {
+  flex: 1;
+  background-color: #3932b5;
+  width: 100%;
+  border-radius: 1.5rem;
+}
+
+#features .left-col img:nth-child(2) {
+  flex: 2;
+}
+
+/* JOIN section  */
+#join {
+  padding: 2.5rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+#join > div {
+  width: 100%;
+  max-width: 1200px;
+  background-image: url("images/businessman.png");
+  padding: 2.5rem 2.5rem;
+  border-radius: 1.5rem;
+}
+
+#join .content {
+  max-width: 480px;
+}
+
+#join .content h3 {
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+#join .content p {
+  margin: 1.5rem 0;
+}
+
+/* Download section  */
+#download {
+  padding: 2.5rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+#download > div {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+#download h3 {
+  font-weight: 700;
+  font-size: 3rem;
+}
+
+#download p {
+  font-weight: 400;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+#download .download-buttons {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 1rem;
+}
+
+#download > div > img {
+  min-height: 400px;
+  max-height: 600px;
+}
+
+/* closing CTA  */
+#closing {
+  background-color: var(--primary);
+  padding: 2.5rem 1rem;
+  color: white;
+}
+
+#closing > div {
+  max-width: 768px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+#closing h3 {
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+#closing p {
+  font-weight: 400;
+  font-size: 1rem;
+  margin: 1rem 0px;
+}
+
+/* Footer */
+footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 2.5rem 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  font-size: 14px;
+}
+
+footer .copyright {
+  margin-bottom: 1rem;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  #hero > div {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #hero h3 {
+    font-size: 2rem;
+  }
+
+  #hero p {
+    font-size: 1rem;
+  }
+
+  #hero .hero-download-imgs {
+    justify-content: center;
+  }
+
+  #hero > div > img {
+    min-height: 240px;
+    max-height: 300px;
+  }
+
+  #about > div {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #about h3 {
+    font-size: 1.5rem;
+  }
+
+  #about p {
+    font-size: 1rem;
+  }
+
+  #about > div > img {
+    min-height: 240px;
+    max-height: 300px;
+  }
+
+  #features .container {
+    grid-template-columns: 1fr;
+  }
+
+  #join > div {
+    background-size: cover;
+    text-align: center;
+  }
+
+  #download > div {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #download h3 {
+    font-size: 2rem;
+  }
+
+  #download p {
+    font-size: 1rem;
+  }
+
+  #download > div > img {
+    min-height: 240px;
+    max-height: 300px;
+  }
+}
