@@ -48,3 +48,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const copyrightElement = document.querySelector("footer > div > p.copyright");
   copyrightElement.innerHTML = copyrightContent;
 });
+
+function toggleMenu() {
+  const navDrawer = document.querySelector(".nav-drawer");
+  navDrawer.classList.toggle("active");
+}
