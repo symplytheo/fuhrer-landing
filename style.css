@@ -465,7 +465,6 @@ header .hamburger.active div:nth-child(3) {
 footer {
   background-color: black;
   color: white;
-  text-align: center;
   padding: 2.5rem 0;
   position: relative;
   bottom: 0;
@@ -473,8 +472,40 @@ footer {
   font-size: 14px;
 }
 
+footer > section {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 0 1rem;
+  gap: 3rem;
+}
+
+footer img {
+  margin-bottom: 0.5rem;
+}
+
+footer > section > div > h4 {
+  margin: 1rem 0 0.5rem;
+}
+
+footer address {
+  line-height: 1.5;
+}
+
+footer ul {
+  list-style: none;
+}
+
+footer ul li {
+  margin: 0.5rem 0 0.5rem;
+}
+
 footer .copyright {
-  margin-bottom: 1rem;
+  border-top: 0.5px solid var(--grey);
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  text-align: center;
 }
 
 footer a {
@@ -556,5 +587,20 @@ footer a:hover {
   #download > div > img {
     min-height: 240px;
     max-height: 300px;
+  }
+
+  footer > section {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 1rem;
+    gap: 1.5rem;
+  }
+
+  footer > section > div > h4 {
+    margin: 0rem 0 0.5rem;
+  }
+
+  footer > section div:first-child,
+  footer > section div:last-child {
+    grid-column: span 2 / span 2;
   }
 }
