@@ -50,6 +50,26 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function toggleMenu() {
-  const navDrawer = document.querySelector(".nav-drawer");
-  navDrawer.classList.toggle("active");
+  document.querySelector(".nav-drawer").classList.toggle("active");
+  document.querySelector(".hamburger").classList.toggle("active");
+}
+
+// dialog
+// Function to open the dialog with specific content
+function openDialog(title, content) {
+  const dialog = document.getElementById("policy-dialog");
+  document.getElementById("dialog-title").textContent = title;
+  document.getElementById("dialog-content").innerHTML = content;
+  dialog.showModal(); // Open the dialog
+  // disable body scrolling
+  document.body.style.overflow = "hidden";
+}
+
+// Function to close the dialog
+function closeDialog() {
+  const dialog = document.getElementById("policy-dialog");
+  dialog.close(); // Close the dialog
+  // enable body scrolling
+  document.body.style.overflow = "auto";
+  window.location.hash = ''
 }

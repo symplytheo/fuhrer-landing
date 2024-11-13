@@ -112,6 +112,11 @@ header .hamburger {
   cursor: pointer;
 }
 
+.hamburger svg {
+  height: 24px;
+  width: 24px;
+}
+
 header .hamburger div {
   width: 24px;
   height: 2px;
@@ -515,6 +520,115 @@ footer a {
 
 footer a:hover {
   text-decoration: underline;
+}
+
+/* Make dialog fullscreen with transparent background */
+dialog::backdrop {
+  background-color: rgba(220, 20, 20, 0.8); /* Overlay effect */
+}
+
+/* Dialog content styling */
+#policy-dialog {
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 100vh;
+  max-height: 100vh;
+  padding: 20px;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+#dialog-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+#dialog-header button {
+  height: 40px;
+  padding: 2px 8px;
+  cursor: pointer;
+}
+
+#dialog-header button:focus {
+  outline: none;
+}
+
+#dialog-header button svg {
+  height: 24px;
+  width: 24px;
+}
+
+#dialog-title {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+#dialog-content {
+  margin: 1rem 0px;
+  max-height: calc(100vh - 96px);
+  overflow-y: auto;
+}
+
+ol li p {
+  margin: 4px 0;
+}
+/* Styling for the first decimal-level list */
+.decimal-list {
+  list-style-type: decimal;
+  counter-reset: section; /* Initialize the counter */
+}
+
+.decimal-list > li {
+  margin-bottom: 24px;
+  list-style-position: inside; /* Ensure numbers align well with content */
+}
+
+/* Styling for the alphabet-level nested list */
+.alpha-list {
+  list-style-type: lower-alpha;
+  margin-left: 40px;
+}
+
+.alpha-list > li {
+  margin-bottom: 12px;
+}
+
+/* Styling for the Roman numeral nested list */
+.roman-list {
+  list-style-type: lower-roman;
+  margin-left: 60px;
+}
+
+.roman-list > li {
+  margin-bottom: 8px;
+}
+
+/* Bold styling for list titles */
+.decimal-list > li > strong,
+.alpha-list > li > strong,
+.roman-list > li > strong {
+  font-weight: bold;
+}
+
+.decimal-list > li > strong,
+.no-style > li > strong {
+  font-size: 1.25rem;
+  display: inline-block;
+  margin-bottom: 4px;
+}
+
+.no-style {
+  list-style-type: none;
+}
+
+.no-style > li {
+  margin-bottom: 24px;
+}
+
+ul li p {
+  margin: 4px 0;
 }
 
 /* Media Queries */
